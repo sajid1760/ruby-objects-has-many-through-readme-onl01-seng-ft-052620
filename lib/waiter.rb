@@ -25,9 +25,8 @@ class Waiter
   end
   
   def best_tipper
-    tipvector = @meals.map { |meal| meal.tip }
-    tipmax = tipvector.max
-    tipmaxmeal = @meals.find { |meal| meal.tip == tipmax}
+    tipmax = Meal.all.tip.max 
+    tipmaxmeal = Meal.all.find { |meal| meal.tip == tipmax}
     tipmaxmeal.name
   end
 end
