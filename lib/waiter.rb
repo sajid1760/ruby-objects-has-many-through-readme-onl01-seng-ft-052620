@@ -8,7 +8,6 @@ class Waiter
     @name = name
     @yrs_experience = yrs_experience
     @@all << self
-    @meals = []
   end
  
   def self.all
